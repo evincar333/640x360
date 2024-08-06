@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 # Speed of the player movement
-@export var speed = 600
+@export var speed = 300
 @onready var sprite_2d = $Sprite2D
 
 # Define the playing area boundaries
