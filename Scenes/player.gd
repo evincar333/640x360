@@ -28,10 +28,10 @@ func _process(delta):
 		direction = direction.normalized()
 
 	# Flip Sprite
-	if direction.x < 0:
-		sprite_2d.flip_h = true
-	elif direction.x > 0:
-		sprite_2d.flip_h = false
+	#if direction.x < 0:
+		#sprite_2d.flip_h = true
+	#elif direction.x > 0:
+		#sprite_2d.flip_h = false
 
 	# Apply movement
 	velocity = direction * speed
