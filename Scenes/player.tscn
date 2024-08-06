@@ -20,3 +20,7 @@ texture = ExtResource("2_s0kmo")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_top = 0
 limit_bottom = 360
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-11, 0)
+gravity = Vector2(-980, 0)
