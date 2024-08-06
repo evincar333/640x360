@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn4hfy7hky6v2"]
+
+[ext_resource type="Texture2D" uid="uid://c4caoqhatrf7f" path="res://Resources/Planets.png" id="1_66o66"]
+[ext_resource type="Texture2D" uid="uid://bchifls758gtv" path="res://Resources/Stars.png" id="2_vvju6"]
+[ext_resource type="PackedScene" uid="uid://ceuogvhaujepn" path="res://Scenes/player.tscn" id="3_bis11"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Stars" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Stars"]
+texture_filter = 1
+texture = ExtResource("2_vvju6")
+centered = false
+
+[node name="Planets" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(640, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Planets"]
+texture_filter = 1
+texture = ExtResource("1_66o66")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("3_bis11")]
+position = Vector2(294, 123)
